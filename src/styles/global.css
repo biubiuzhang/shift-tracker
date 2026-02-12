@@ -1,0 +1,167 @@
+:root {
+  /* Minnie Mouse Colors */
+  --color-red: #E31837;
+  --color-red-dark: #B8102C;
+  --color-pink: #FF69B4;
+  --color-pink-light: #FFB6D9;
+  --color-black: #1A1A1A;
+  --color-white-dot: #FFFFFF;
+  --color-blue: #E31837;
+  --color-green: #2FA572;
+  --color-orange: #E8923E;
+  --color-yellow: #FFD700;
+  --color-purple: #9B59B6;
+  --color-teal: #3AAFCF;
+  --color-indigo: #4A47A3;
+  --color-gold: #FFFFFF;
+
+  /* Semantic Colors */
+  --color-label: #1A1A1A;
+  --color-secondary-label: #4A4A4A;
+  --color-tertiary-label: #4A4A4A99;
+  --color-placeholder: #4A4A4A4D;
+
+  /* Backgrounds — soft pink Minnie tones */
+  --bg-primary: #FFF0F5;
+  --bg-secondary: #FFFFFF;
+  --bg-tertiary: #FFE4ED;
+  --bg-grouped: #FFE4ED;
+  --bg-grouped-secondary: #FFFFFF;
+
+  /* Separators */
+  --separator: rgba(227, 24, 55, 0.12);
+  --separator-opaque: #F0C0D0;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 20px;
+  --spacing-xl: 24px;
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  /* Font */
+  --font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans SC', 'Source Han Sans SC', -apple-system, system-ui, sans-serif;
+
+  /* Safe areas */
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+
+  /* Tab bar */
+  --tab-bar-height: 40px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  font-family: var(--font-family);
+  background: #1A1A1A;
+  color: var(--color-label);
+  font-size: 24px;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior: none;
+  height: 100%;
+  overflow: hidden;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-primary);
+}
+
+input, select, textarea, button {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  touch-action: manipulation;
+}
+
+a {
+  color: var(--color-red);
+  text-decoration: none;
+}
+
+/* Utility classes */
+.text-secondary {
+  color: var(--color-secondary-label);
+}
+
+.text-tertiary {
+  color: var(--color-tertiary-label);
+}
+
+/* Scroll container */
+.scroll-content {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+  height: 0;
+  padding-bottom: calc(var(--tab-bar-height) + var(--safe-bottom) + 16px);
+}
+
+.visible-scroll {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-height: 0;
+  height: 0;
+  padding-bottom: calc(var(--tab-bar-height) + var(--safe-bottom) + 16px);
+}
+
+/* View container */
+.view {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 0;
+  height: 0;
+}
+
+/* Header */
+.view-header {
+  padding: var(--safe-top) var(--spacing-sm) 2px;
+  background: var(--color-red);
+  border-bottom: none;
+}
+
+.view-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #FFFFFF;
+}
+
+.view-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.view-header .btn-text {
+  color: #FFFFFF;
+}
+
+.view-header .back-btn {
+  color: #FFFFFF;
+}
