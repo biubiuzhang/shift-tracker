@@ -10,8 +10,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['icon-192.png', 'icon-512.png', 'apple-touch-icon.png'],
       manifest: {
-        name: 'ShiftTracker',
-        short_name: 'Shifts',
+        name: 'Minnie',
+        short_name: 'Minnie',
         description: 'Track shifts across multiple jobs with a clear week view',
         theme_color: '#007AFF',
         background_color: '#F2F2F7',
